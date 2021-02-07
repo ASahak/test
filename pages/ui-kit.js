@@ -10,7 +10,7 @@ import {
     Phone,
     RangeSlider,
     Tag,
-} from 'Components/Shared/UI';
+} from '../Components/Shared/UI';
 import { useForm } from 'react-hook-form';
 
 
