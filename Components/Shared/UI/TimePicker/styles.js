@@ -1,0 +1,113 @@
+import {createUseStyles} from 'react-jss'
+import variables from '../../../../static/styles/jss/variables';
+
+export default createUseStyles({
+    'bottom-wrap': {
+        lineHeight: '14px',
+        position: 'absolute',
+        bottom: '0px',
+        fontSize: '11px',
+        color: '#C7C7C7',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        width: '100%',
+        '& .helper-text': {
+            margin: '0px'
+        },
+    },
+    'error-line': {
+        fontFamily: 'Arial',
+        position: 'absolute',
+        left: '0',
+        bottom: '0px',
+        display: 'inline-block',
+        transition: 'all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+        fontSize: '11px',
+        lineHeight: '14px',
+        color: variables.$danger,
+        width: '100%',
+    },
+    'timepicker-dialog': {
+        backgroundColor: props => props.overlayBG,
+    },
+    'mobile-wheel-picker': {
+        height: '290px',
+        width: '280px',
+        borderRadius: '4px',
+        fontFamily: 'Arial',
+        backgroundColor: props => props.backgroundColor,
+        border: props => props.border,
+        boxShadow: '0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%), 0 11px 15px -7px rgb(0 0 0 / 20%)',
+        padding: '24px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        '& h4': {
+            color: props => props.textColor,
+            fontSize: '16px',
+            fontWeight: 'bold',
+        },
+        '& .pickers-wrapper': {
+            display: 'flex',
+            alignItems: 'center',
+            height: '100%',
+            position: 'relative',
+            '&::after': {
+                content: '":"',
+                position: 'absolute',
+                left: '0',
+                right: '0',
+                margin: 'auto',
+                width: '8px',
+                fontSize: '24px',
+                fontWeight: 'bold',
+                height: '37px',
+                top: '0',
+                bottom: '0',
+                color: props => props.textColor,
+            },
+            '& .rmc-picker': {
+                height: '80%',
+                '& .rmc-picker-mask': {
+                    background: 'none !important',
+                },
+                '& .rmc-picker-indicator': {
+                    height: '47px',
+                    borderTop: '2PX solid #3B83D7',
+                    borderBottom: '2PX solid #3B83D7',
+                    right: '0',
+                    margin: 'auto',
+                    width: '60%',
+                },
+                '& .rmc-picker-item': {
+                    height: '47px',
+                    lineHeight: '47px',
+                    color: props => props.selectedItem,
+                    fontSize: '24px',
+                    fontWeight: '400',
+                    transition: '.1s',
+                },
+                '& .rmc-picker-item-selected': {
+                    fontSize: '24px',
+                    fontWeight: 'bold',
+                    color: props => props.textColor,
+                },
+            },
+        },
+        '& .actions-wrap': {
+            textAlign: 'right',
+            marginTop: '20px',
+            '& > button': {
+                outline: 'none',
+                color: props => props.actionsColor,
+                fontSize: '13px',
+                fontWeight: 'bold',
+                background: 'none',
+                border: 'none',
+                textTransform: 'uppercase',
+                cursor: 'pointer',
+            },
+        },
+    },
+})

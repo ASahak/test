@@ -1,0 +1,4 @@
+export default {
+    TOGGLE_CATEGORIES_MENU: Symbol('TOGGLE_CATEGORIES_MENU'),
+    SET_PAGE_NAME: Symbol('SET_PAGE_NAME'),
+};
